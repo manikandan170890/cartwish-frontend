@@ -5,7 +5,7 @@ import "./ProductsSidebar.css";
 import rocket from "../../assets/rocket.png";
 import LinkWithIcon from "../Navbar/LinkWithIcon";
 import useData from "../../hooks/useData";
-
+import config from "../../config.json";
 const ProductsSidebar = () => {
   /* Created for custom hooks useData.js  
     so we commented belo lines
@@ -31,7 +31,7 @@ const ProductsSidebar = () => {
               id={category._id}
               title={category.name}
               link={`/products?category=${category.name}`}
-              emoji={`http://localhost:5000/category/${category.image}`}
+              emoji={`${config.backendURL}/category/${category.image}`}
               sidebar={true}
             />
           ))}
